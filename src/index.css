@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --color-soil-50: #f6f3ee;
+  --color-soil-100: #ebe4d8;
+  --color-soil-200: #d6c9b0;
+  --color-soil-700: #5c4a32;
+  --color-soil-900: #2c2116;
+  --color-leaf-500: #3d7a4a;
+  --color-leaf-600: #2f5f39;
+  --color-leaf-700: #244a2c;
+  --color-sun-400: #e8b84a;
+  --color-sun-500: #d4a017;
+  --color-clay-500: #c45c26;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 min-h-screen bg-soil-50 font-sans text-soil-900 antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 10% -10%, rgba(61, 122, 74, 0.12), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 0%, rgba(232, 184, 74, 0.15), transparent);
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
